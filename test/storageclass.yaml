@@ -1,0 +1,26 @@
+---
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+   name: csi-block-sc
+provisioner: csi-infiblock-plugin
+parameters:
+   clusterID: [CLUSTERID]
+   #副本存储池
+   pool: [POOLNAME]   
+   #纠删码存储池
+   #pool: [REPLICATED-POOLNAME]
+   #datapool: [EC-DATA-POOLNAME]
+   imageFeatures: layering
+   csi.storage.k8s.io/provisioner-secret-name: csi-block-secret
+   csi.storage.k8s.io/provisioner-secret-namespace: default
+   csi.storage.k8s.io/controller-expand-secret-name: csi-block-secret
+   csi.storage.k8s.io/controller-expand-secret-namespace: default
+   csi.storage.k8s.io/node-stage-secret-name: csi-block-secret
+   csi.storage.k8s.io/node-stage-secret-namespace: default
+   csi.storage.k8s.io/fstype: ext4
+reclaimPolicy: Delete
+allowVolumeExpansion: true
+mountOptions:
+   - discard
+
