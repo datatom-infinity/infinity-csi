@@ -1,6 +1,6 @@
-# Datatom infinity block CSI Plugin
+# Datatom infinity CSI Plugin
 
-The infinity block CSI plugin can enable your Container Orchestrator use datatom infinity storage.
+The infinity block and fs CSI plugin can enable your Container Orchestrator use datatom infinity storage.
 
 ## Overview
 
