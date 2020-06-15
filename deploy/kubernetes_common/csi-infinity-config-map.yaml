@@ -1,0 +1,14 @@
+---
+apiVersion: v1
+kind: ConfigMap
+data:
+  config.json: |-
+    [
+      {
+        "clusterID": [CLUSTERID],
+        "monitors": [NODE_IP]
+      }
+    ]
+metadata:
+  name: infinity-csi-config
+
