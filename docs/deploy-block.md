@@ -1,4 +1,4 @@
-# Datatom infinity CSI Plugin
+# Datatom infinity block CSI Plugin
 
 The infinity block CSI plugin can enable your Container Orchestrator use datatom infinity storage.
 
@@ -28,7 +28,7 @@ stated in the [mount propagation
 docs](https://kubernetes.io/docs/concepts/storage/volumes/#mount-propagation),
 the Docker daemon of the cluster nodes must allow shared mounts.
 
-The deploy YAML manifests are located in [deploy/block/kubernetes](./deploy/block/kubernetes).
+The deploy YAML manifests are located in [deploy/block/kubernetes](https://github.com/datatom-infinity/infinity-csi/blob/master/deploy/block/kubernetes).
 
 **Deploy RBACs for sidecar containers and node plugins:**
 
@@ -117,7 +117,7 @@ service/csi-blockplugin-provisioner   ClusterIP   10.100.49.156   <none>        
 ```
 
 # Test block plugin
-The test YAML manifests are located in [test](./test/infiblock/kubernetes/).
+The test YAML manifests are located in [test](https://github.com/datatom-infinity/infinity-csi/blob/master/test/infiblock/kubernetes/).
 
 ## Deploying the storage class
 
@@ -142,8 +142,8 @@ Before continuing, make sure you enabled the required
 feature gate `VolumeSnapshotDataSource=true` in your Kubernetes cluster.
 
 In the `test` directory you will find two files related to snapshots:
-[snapshotclass.yaml](./test/infiblock/kubernetes/snapshotclass.yaml) and
-[snapshot.yaml](./test/infiblock/kubernetes/snapshot.yaml).
+[snapshotclass.yaml](https://github.com/datatom-infinity/infinity-csi/blob/master/test/infiblock/kubernetes/snapshotclass.yaml) and
+[snapshot.yaml](https://github.com/datatom-infinity/infinity-csi/blob/master/test/infiblock/kubernetes/snapshot.yaml).
 
 Once you created your volume, you'll need to customize at least
 `snapshotclass.yaml` and make sure the `clusterid` parameter matches
@@ -186,11 +186,11 @@ $ kubectl describe volumesnapshot block-pvc-snapshot
 ```
 
 To be sure everything is OK you can check it in the infinity admin interface.
-![snapshot_info](./images/block/snapshot.png)
+![snapshot_info](https://github.com/datatom-infinity/infinity-csi/blob/master/images/block/snapshot.png)
 
 To restore the snapshot to a new PVC, deploy
-[pvc-restore.yaml](./test/infiblock/kubernetes/pvc-restore.yaml) and a testing pod
-[pod-restore.yaml](./test/infiblock/kubernetes/pod-restore.yaml):
+[pvc-restore.yaml](https://github.com/datatom-infinity/infinity-csi/blob/master/test/infiblock/kubernetes/pvc-restore.yaml) and a testing pod
+[pod-restore.yaml](https://github.com/datatom-infinity/infinity-csi/blob/master/test/infiblock/kubernetes/pod-restore.yaml):
 
 ```bash
 kubectl create -f pvc-restore.yaml

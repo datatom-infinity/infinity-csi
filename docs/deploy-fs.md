@@ -1,4 +1,4 @@
-# Datatom infinity CSI Plugin
+# Datatom infinity filesystem CSI Plugin
 
 The infinity filesystem CSI plugin can enable your Container Orchestrator use datatom infinity storage.
 
@@ -28,7 +28,7 @@ stated in the [mount propagation
 docs](https://kubernetes.io/docs/concepts/storage/volumes/#mount-propagation),
 the Docker daemon of the cluster nodes must allow shared mounts.
 
-The deploy YAML manifests are located in [deploy/fs/kubernetes](./deploy/fs/kubernetes).
+The deploy YAML manifests are located in [deploy/fs/kubernetes](https://github.com/datatom-infinity/infinity-csi/blob/master/deploy/fs/kubernetes).
 
 **Deploy RBACs for sidecar containers and node plugins:**
 
@@ -119,7 +119,7 @@ service/kubernetes                     ClusterIP   10.96.0.1       <none>       
 ```
 
 # Test fs plugin
-The test YAML manifests are located in [test](./test/infifs/kubernetes/).
+The test YAML manifests are located in [test](https://github.com/datatom-infinity/infinity-csi/blob/master/test/infifs/kubernetes/).
 
 ## Deploying the storage class
 

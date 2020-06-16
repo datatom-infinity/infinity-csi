@@ -11,7 +11,7 @@ InfinityCSI plugins implement an interface between CSI enabled Container Orchest
 (CO) and infinity cluster. It allows dynamically provisioning infinity volumes and
 attaching them to workloads.
 
-Independent CSI plugins are provided to support block and fs backed volumes,
+Independent CSI plugins are provided to support block and fs backed volumes.
 
 For details about configuration and deployment of block plugin, please refer
   [block doc](./docs/deploy-block.md) and
